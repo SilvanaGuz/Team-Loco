@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;900&display=swap');
+
+  /*========== Colores ==========*/
+  :root {
+      --title-color: hsl(332.6,27%,49.4%);
+      --text-color: hsl(0, 0%, 20%);
+      --hover-color: hsl(187.3,54.7%,70.6%);
+      --nav-color: hsl(0, 0%, 100%);
+    
+      /*========== Fuentes and Tipografias ==========*/
+      --body-font: 'Rubik', sans-serif;
+      --h1-font-size: 2.1rem;
+      --h2-font-size: 1.9rem;
+      --small-font-size: .813rem;
+      --p-font-size: 1.1rem;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+  
+    html {
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--text-color);
+      color: var(--nav-color);
+    }
+
+    nav {
+      height: 75px;
+      width: 100%;
+      background-color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo_container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .logo-small {
+      display: block;
+      width: 60px;
+    }
+
+    .logo-large {
+      display: none;
+    }
+
+    .menu_btn {
+      display: none;
+      font-size: 30px;
+      color: var(--nav-color);
+      cursor: pointer;
+    }
+
+    .menu_btn .burger-icon,
+    .menu_btn .close-icon {
+      font-size: 30px;
+    }
+
+    .menu_btn .burger-icon {
+      display: inline-block;
+    }
+
+    .menu_btn .close-icon {
+      display: none;
+    }
+
+    #check:checked ~ .menu_btn .burger-icon {
+      display: none;
+    }
+
+    #check:checked ~ .menu_btn .close-icon {
+      display: inline-block;
+    }
+
+    .nav_list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      transition: all .5s;
+    }
+
+    .nav_list li {
+      margin: 0 15px;
+      transition: all .5s;
+    }
+
+    .nav_list a {
+      color: var(--nav-color);
+      text-decoration: none;
+      font-size: var(--h2-font-size);
+    }
+
+    .nav_list a.active,
+    .nav_list a:hover {
+      color: var(--hover-color);
+      transition: 0.5s;
+    }
+
+/* ===== Estilos específicos para el menú desplegable ===== */
+
+    #check {
+      display: none;
+    }
+
+    #check ~ .nav_list {
+      transition: height 0.5s ease;
+    }
+
+    #check:checked ~ .nav_list {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #check:checked ~ .nav_list li {
+        display: block;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+  /* ===== Section Hero ===== */
+
+    .hero-container {
+      display: flex;
+      padding: 0px 20px;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('Logos/banner.jpg') center/cover no-repeat;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-text {
+      font-size: var(--h1-font-size);
+      margin: 20px 0;
+      color: var(--hover-color);
+    }
+
+  /* ===== Botones ===== */
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: var(--p-font-size);
+      text-decoration: none;
+      background-color: var(--title-color);
+      color: var(--nav-color);
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--hover-color);
+      color: var(--text-color);
+      font-weight: 600;
+    }
+
+    .linea-horizontal {
+      border: 1px solid var(--nav-color); 
+      margin: 0px 0;
+    }
+
+   /* --------- Destacados ----------- */
+
+    #destacados {
+      text-align: center;
+    }
+    
+    .ico-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 70px;
+    }
+    
+    .ico-1 {
+      text-align: center;
+      font-size: 10px;
+      padding: 10px 0px;
+    }
+    
+    .ico-1 p {
+      color: var(--nav-color);
+      font-size: var(--p-font-size);
+      margin: 5px 0;
+      font-weight: 600;
+    }
+    
+    .ico-1 img {
+      width: 70px;
+      height: auto;
+    }
+
+   /* ===== Titulo nuestros servicios ===== */
+
+    .section {
+      text-align: center;
+      background-color: var(--text-color);
+      padding: 100px 0;
+    }
+  
+    .section-title {
+      margin-bottom: 2rem;
+      font-size: var(--h2-font-size);
+      color: var(--title-color);
+    }
+
+   /* ---- Cards ----  */
+
+    .container {
+      display: grid;
+      place-items: center;
+      margin-inline: 1.5rem;
+      padding-block: 6rem;
+    }
+
+    .card_container {
+      display: grid;
+      row-gap: 3.5rem;
+    }
+
+    .card_article {
+      position: relative;
+      /* overflow: hidden; */
+    }
+
+    .card_img {
+      width: 370px;
+      height: 500px;
+      border-radius: 1.5rem;
+    }
+
+    .card_info {
+      width: 350px;
+      background-color: var(--nav-color);
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+      border-radius: 1rem;
+      position: absolute;
+      bottom: -9rem;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      opacity: 0;
+      transition: opacity .3s .5s;
+    }
+
+    .card_title {
+      font-size: var(--h2-font-size);
+      font-weight: 600;
+      color: var(--title-color);
+      margin-bottom: .75rem;
+    }
+
+    .card_descripcion {
+      display: block;
+      font-size: var(--p-font-size);
+      color: var(--text-color);
+      margin-bottom: .25rem;
+    }
+
+    @keyframes show-data {
+      50% {
+          transform: translateY(-10rem);
+      }
+      100% {
+          transform: translateY(-7rem);
+      }
+    }
+
+    @keyframes remove-overflow {
+      to {
+          overflow: initial;
+      }
+    }
+
+    @keyframes remove-data {
+      0% {
+          transform: translateY(-7rem);
+      }
+      50% {
+          transform: translateY(-10rem);
+      }
+      100% {
+          transform: translateY(.5rem);
+      }
+    }
+
+    @keyframes show-overflow {
+      0% {
+          overflow: initial;
+          pointer-events: none;
+      }
+      50% {
+          overflow: hidden;
+      }
+    }
+
+    .card_article:hover .card_info {
+      animation: show-data 1s forwards;
+      opacity: 1;
+      transition: opacity .3s;
+    }
+
+    .card_article:hover {
+        animation: remove-overflow 2s forwards;
+    }
+
+    .card_article:not(:hover) {
+        animation: show-overflow 2s forwards;
+    }
+
+    .card_article:not(:hover) .card_info {
+        animation: remove-data 1s forwards;
+    }
+
+  /* ====== Sobre la Empresa ===== */
+
+    #sobre-nosotros {
+      text-align: center;
+      padding: 70px; 
+    }
+
+    #sobre-nosotros h2 {
+      font-size: 1.7em;
+      padding: 20px 5px;
+      color: var(--title-color);
+    }
+
+    #sobre-nosotros p {
+        padding: 30px 5px;
+        font-size: var(--p-font-size);
+    }
+
+    #sobre-nosotros span {
+      color: var(--title-color);
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    /* ===== newsletter section =====*/
+
+    .newsletter-section {
+      background-color: var(--text-color);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .newsletter-section h2 {
+      color: var(--title-color);
+      padding: 0 20px 50px 20px;
+    }
+    
+    .newsletter-container {
+      background-color: var(--text-color);
+      padding: 40px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    
+    .fa-envelope {
+      margin-right: 10px;
+      color: var(--title-color);
+      font-size: var(--h1-font-size);
+    }
+    
+    input {
+      padding: 10px;
+      border: 1px solid var(--nav-color);
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: var(--p-font-size);
+      background-color: var(--title-color);
+      color: var(--container-color);
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+      background-color: var(--hover-color);
+      color: var(--text-color);
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+      background-color: var(--text-color);
+      color: var(--nav-color);
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+/* ===== Estilo para las redes sociales ===== */
+
+    .redes-sociales {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .redes-sociales a {
+      color: var(--nav-color);
+      font-size: 30px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+  
+    .redes-sociales a:hover {
+      color: var(--title-color);
+    }
+  
+  /* ===== Estilo para los enlaces de privacidad y cookies ===== */
+
+    .privacidad-cookies a {
+      color: var(--nav-color);
+      text-decoration: none;
+      margin: 10px;
+      transition: color 0.3s;
+      font-size: var(--small-font-size);
+    }
+  
+    .privacidad-cookies a:hover {
+      color: var(--title-color);
+    }
+  
+  /* ===== Estilo para el párrafo de copyright ===== */
+
+    footer p {
+      margin-top: 10px;
+      margin-bottom: 1px;
+    }
+
+
+  /* ===== Estilos para pantallas pequeñas ===== */
+  @media screen and (max-width: 767px) {
+
+    .menu_btn {
+        display: block;
+    }
+
+    .nav_list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        background-color: var(--text-color);
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .nav_list.active {
+        display: flex;
+    }
+
+    #sobre-nosotros {
+      text-align: center;
+      padding: 50px; 
+    }
+    
+      #sobre-nosotros h2 {
+      font-size: 1.7em;
+      padding: 20px 5px;
+    }
+    
+      #sobre-nosotros p {
+      padding: 30px 5px 30px 5px;
+    }
+
+  }
+
+  /* ===== Estilos para pantallas grandes ===== */
+    @media screen and (min-width: 768px) {
+
+      :root {
+      --h1-font-size: 2.5rem;
+      --h2-font-size: 1.8rem;
+      --small-font-size: .900rem;
+      --p-font-size: 1rem;
+      }
+
+      .logo-small {
+        display: none;
+      }
+
+      .logo-large {
+          display: block;
+          width: 160px;
+      }
+
+      .nav_list {
+          display: flex;
+          font-size: var(--small-font-size);
+      }
+
+      .nav_list a {
+        color: var(--nav-color);
+        text-decoration: none;
+        font-size: var(--small-font-size);
+      }
+
+      .linea-horizontal {
+        display: none;
+      }
+
+      .hero-container {
+        padding: 0px 50px;
+      }
+
+      .linea-horizontal {
+        display: none;
+      }
+  
+      .ico-container {
+        padding: 80px 50px 30px 50px;
+        flex-direction: row; 
+      }
+  
+      .ico {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -10px;
+      }
+    
+      .ico-1 {
+        width: calc(25% - 20px);
+        margin: 0 10px 20px 10px;
+      }
+    
+      .ico-1:last-child {
+        margin-right: 0;
+      }
+
+      .section {
+        text-align: center;
+        background-color: var(--text-color);
+        padding: 50px 0;
+      }
+  
+      .section-title {
+        font-size: var(--h2-font-size);
+      }
+  
+      .card_container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+      }
+
+      /* ====== Sobre la Empresa ===== */
+
+      #sobre-nosotros .contenedor-sobre-nosotros {
+        padding: 50px 0px;
+        margin: 0px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #sobre-nosotros .texto {
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #sobre-nosotros h2 {
+        padding-bottom: 30px;
+        font-size: 2.3em;
+      }
+
+      #sobre-nosotros .img-sobre-nosotros {
+        background-image: url(Logos/empresa.jpg);
+        background-size: cover;
+        background-position: center center;
+        border-radius: 10px;
+        height: 500px;
+        width: 420px;
+      }
+
+      #destacados {
+        padding: 5px 20px;
+        margin: 5px;
+      }
+
+      .newsletter-section {
+        max-width: 80%;
+        margin: 0 auto; 
+      }
+
+      .privacidad-cookies a {
+        font-size: var(--p-font-size);
+      }
+
+  }
+
+  /* ====== Pantallas de Escritorio ===== */
+
+    @media screen and (min-width: 1120px) {
+
+      :root {
+        --h1-font-size: 2.7rem;
+        --h2-font-size: 2rem;
+        --small-font-size: 1.1rem;
+        --p-font-size: 1.2rem;
+      }
+
+      .logo-large {
+        display: block;
+        width: 220px;
+      }
+
+      .hero-container {
+        padding: 0px 180px;
+      }
+
+      .ico-container {
+        padding: 80px;
+      }
+
+      .container {
+        height: 100vh;
+      }
+    
+      .card_container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .card__img {
+        width: 348px;
+      }
+      .card_info {
+        width: 316px;
+        padding-inline: 2.5rem;
+      }
+
+      .contenedor-sobre-nosotros {
+        flex-direction: row;
+      }
+  
+      .texto {
+        text-align: left;
+      }
+  
+      .img-sobre-nosotros {
+        display: block;
+      }
+    
+      .newsletter-section {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    
+      .newsletter-container {
+        display: flex;
+        align-items: center;
+      }
+    
+      .newsletter-container i {
+        font-size: 2.7em;
+        margin-right: 10px;
+      }
+    
+      input[type="email"] {
+        flex: 1;
+        width: 50%;
+      }
+    }

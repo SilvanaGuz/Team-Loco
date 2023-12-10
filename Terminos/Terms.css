@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;900&display=swap');
+
+  /*========== Colores ==========*/
+  :root {
+      --title-color: hsl(332.6,27%,49.4%);
+      --text-color: hsl(0, 0%, 20%);
+      --hover-color: hsl(187.3,54.7%,70.6%);
+      --nav-color: hsl(0, 0%, 100%);
+    
+      /*========== Fuentes and Tipografias ==========*/
+      --body-font: 'Rubik', sans-serif;
+      --h1-font-size: 2.1rem;
+      --h2-font-size: 1.9rem;
+      --h3-font-size: 1.5rem;
+      --small-font-size: .813rem;
+      --p-font-size: 1.1rem;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        /* text-decoration: none;
+        list-style: none; */
+        box-sizing: border-box;
+      }
+  
+    html {
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--text-color);
+      color: var(--nav-color);
+    }
+
+    .Terminos {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    h1{
+        color: var(--title-color);
+        font-size: var(--h1-font-size);
+        padding-bottom: 10px;
+    }
+
+    time {
+        font-size: var(--small-font-size);
+    }
+
+    h2 {
+        padding: 2rem;
+        color: var(--title-color);
+        font-size: var(--h2-font-size);
+    }
+
+    p {
+        padding: 1.3rem;
+        font-size: var(--p-font-size);
+    }
+
+    span {
+        color: var(--title-color);
+        font-weight: 600;
+        font-size: var(--p-font-size);
+    }
+
+    a {
+        color: var(--hover-color);
+        text-decoration: none;
+        margin: 10px;
+        transition: color 0.3s;
+        font-size: var(--p-font-size);
+      }
+    
+    a:hover {
+        color: var(--title-color);
+      }
+
+    li {
+        list-style-type: square;
+        margin-left: 20px;
+        padding-top: 1rem;
+        font-size: var(--p-font-size);
+      }
+
+    h3 {
+        color: var(--title-color);
+        font-size: var(--h3-font-size);
+    }
+
+    .noticias {
+      border: 2px solid var(--title-color);
+      background-color: var(--nav-color);
+      color: var(--text-color);
+    }
+
+    .linea-horizontal {
+        border: 1px solid var(--nav-color); 
+        margin: 0px 0;
+      }
+
+      footer {
+        background-color: var(--text-color);
+        color: var(--nav-color);
+        padding: 20px 10px;
+        text-align: center;
+      }
+
+  
+      .redes-sociales {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+  
+      .redes-sociales a {
+        color: var(--nav-color);
+        font-size: 30px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+    
+      .redes-sociales a:hover {
+        color: var(--title-color);
+      }
+  
+      .privacidad-cookies a {
+        color: var(--nav-color);
+        text-decoration: none;
+        margin: 10px;
+        transition: color 0.3s;
+        font-size: var(--small-font-size);
+      }
+    
+      .privacidad-cookies a:hover {
+        color: var(--title-color);
+      }
+  
+      footer p {
+        margin-top: 10px;
+        margin-bottom: 1px;
+      }
+
+      @media screen and (min-width: 768px) {
+        :root {
+            --h1-font-size: 2.5rem;
+            --h2-font-size: 1.8rem;
+            --h3-font-size: 1.6rem;
+            --small-font-size: .900rem;
+            --p-font-size: 1rem;
+            }
+
+            .privacidad-cookies a {
+                font-size: var(--p-font-size);
+              }
+        
+          }
+
+          @media screen and (min-width: 1120px) {
+
+            :root {
+              --h1-font-size: 2.7rem;
+              --h2-font-size: 2rem;
+              --h3-font-size: 1.8rem;
+              --small-font-size: 1.1rem;
+              --p-font-size: 1.2rem;
+            }
+
+            .privacidad-cookies a {
+                font-size: var(--p-font-size);
+            }
+          }

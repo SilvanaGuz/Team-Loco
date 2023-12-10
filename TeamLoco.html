@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logos/Team_Loco.png">
+    <link rel="stylesheet" href="TeamLoco.css">
+    <script src="https://kit.fontawesome.com/8a09ff5f9d.js" crossorigin="anonymous"></script>
+    <script src="TeamLoco.js" defer></script>
+    <title>Team Loco</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo_container">
+                <img class="logo logo-small" src="Logos/Team_Loco.png" alt="">
+                <img class="logo logo-large" src="Logos/Team_Loco1.png" alt="">
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="menu_btn">
+                <span class="burger-icon"><i class="fas fa-bars"></i></span>
+                <span class="close-icon"><i class="fa-solid fa-x"></i></span>
+            </label>
+
+            <ul class="nav_list">
+                <li><a class="menu-link" href="#inicio" onclick="cerrarMenu()">Inicio</a></li>
+                <li><a class="menu-link" href="#servicios" onclick="cerrarMenu()">Servicios</a></li>
+                <li><a class="menu-link" href="#sobre-nosotros" onclick="cerrarMenu()">Nosotros</a></li>
+                <li><a class="menu-link" href="#contacto" onclick="cerrarMenu()">Contacto</a></li>
+            </ul>
+        </nav>  
+    </header>
+
+    <section class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-text">Nuestro objetivo es colaborar, inspirar y apoyar nuevos talentos</h1>
+          <a href="https://www.facebook.com/teamlocooficial/videos/trailer-team-loco/1201471203318332/?locale=es_LA" target="_blank" class="cta-button">Ver Video</a>
+        </div>
+      </section>
+
+      <section id="destacados">
+        <div class="ico-container">
+            <div class="ico-1">
+                <img src="Logos/compromiso.png">
+                <p>Compromiso</p>
+            </div>
+            <div class="ico-1">
+                <img src="Logos/entrevista.png">
+                <p>Respuestas</p>
+            </div>
+            <div class="ico-1">
+                <img src="Logos/trabajo-en-equipo.png">
+                <p>Equipo</p>
+            </div>
+            <div class="ico-1">
+                <img src="Logos/tecnologia.png">
+                <p>Tecnologia</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="linea-horizontal">
+
+    <section id="servicios" class="section">
+        <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="container">
+                <div class="card_container">
+                    <article class="card_article">
+                        <img src="Logos/paquetes.jpg" alt="image" class="card_img">
+                        <div class="card_info">
+                            <h2 class="card_title">Paquetes de Contenido</h2>
+                            <p class="card_descripcion">Mes a mes incorporaremos nuevos contenidos, estos paquetes se acumularán en una librería que crecerá con el tiempo, creando una excéntrica colección de tomos digitales.</p>
+                        </div> 
+                    </article>
+
+                    <article class="card_article">
+                        <img src="Logos/team.jpg" alt="image" class="card_img">
+                        <div class="card_info">
+                            <h2 class="card_title">Nuestro Equipo Apasionado</h2>
+                            <p class="card_descripcion">En el corazón de nuestro éxito está un equipo apasionado y comprometido. Cada miembro aporta una chispa única, formando un conjunto vibrante de talento que impulsa nuestra visión hacia el futuro.</p>
+                        </div> 
+                    </article>
+
+
+                    <article class="card_article">
+                        <img src="Logos/multiplataforma.jpg" alt="image" class="card_img">
+                        <div class="card_info">
+                            <h2 class="card_title">Versatilidad en Todas las Plataformas</h2>
+                            <p class="card_descripcion">Nos enorgullece ofrecer experiencias en todas las plataformas  para brindarte una experiencia excepcional en cualquier lugar y en cualquier momento.</p>
+                        </div> 
+                    </article>
+                </div>
+            </div>
+    </section>
+
+    <hr class="linea-horizontal">
+
+    <section id="sobre-nosotros">
+        <h2>Descubre Nuestra Historia</h2>
+        <div class="contenedor-sobre-nosotros">
+            <div class="img-sobre-nosotros"></div>
+                <div class="texto">
+                    <p><span>Team Loco</span> es un proyecto de streaming latinoamericano formado por exempleados del canal <span>Locomotion</span>, tenemos como base retomar las características del canal Locomotion, canal que se caracteriza por tener una política de contenidos caricaturizados especializado en el anime, música electrónica y arte multimedia las 24 horas.
+                     <br><span>Team Loco</span> propone ser una experiencia libre de intervenciones corporativas y de cualquier tipo de restricción 
+                        y censura, donde una de las principales características sería que los subscriptores tendrían un contacto directo con los responsables del proyecto, donde la posibilidad de colaborar y ser parte sería algo que estaría al alcance de todos.
+                        Al ser un proyecto enteramente independiente (es decir, que no contaría con un respaldo financiero de ninguna empresa), la misma sería creada sobre la base de la colaboración de miembros y opcionalmente de los mismos seguidores.  
+                    </p>    
+            </div>
+        </div>
+    </section>
+
+    <hr class="linea-horizontal">
+
+    <section id="contacto" class="newsletter-section">
+        <h2>¡Reciba las últimas noticias directamente en su bandeja de entrada!</h2>
+        <div class="newsletter-container">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="emailInput" placeholder="Ingresa tu correo electrónico">
+          <a href="mailto:" id="sendButton" class="button">Enviar</a>
+        </div>
+      </section>
+             
+    <hr class="linea-horizontal">
+
+    <footer>
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/teamlocooficial/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/TeamLocoOficial" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/locomotion_channel/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="links-importantes">
+          <div class="privacidad-cookies">
+            <a href="Privacy/Privacy.html" target="_blank">Políticas de Privacidad</a>
+            <a href="Cookies/Cookies.html" target="_blank">Cookies</a>
+            <a href="Terminos/Terms.html" target="_blank">Terminos y Condiciones</a>
+          </div>
+        </div>
+        <p>&copy; 2023 Team Loco. Todos los derechos reservados.</p>
+      </footer>
+      
+</body>
+</html>
